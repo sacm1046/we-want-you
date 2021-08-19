@@ -1,0 +1,53 @@
+@import "../../styles/base/settings";
+
+.song-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 50px 10px 10px;
+  margin: 5px 0;
+  border-radius: 100px;
+  border: 1px solid $primary;
+  color: $ligth;
+  background-color: $primary;
+  width: 80%;
+
+  &:hover > span {
+    svg {
+      opacity: 1;
+    }
+  }
+
+  & > span {
+    position: relative;
+    img {
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      opacity: 1;
+      transition: $transition;
+    }
+
+    svg {
+      position: absolute;
+      top: 0;
+      left: 0;
+      opacity: 0;
+      transition: $transition;
+      &:hover {
+        cursor: pointer;
+        transform: scale(1.15);
+      }
+    }
+  }
+
+  & > div {
+    h4 {
+      font-size: 22px;
+    }
+    h5 {
+      font-weight: normal;
+    }
+    text-align: end;
+  }
+}

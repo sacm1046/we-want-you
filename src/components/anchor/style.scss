@@ -1,0 +1,21 @@
+@import '../../styles/base/settings';
+
+.anchor{
+    border: 1px solid $primary;
+    background-color: transparent;
+    transition: $transition;
+    min-width: $minWidthButtons;
+    border-radius: $borderRadiusButtons;
+    display: flex;
+    text-decoration: none;
+    color: $primary;
+    align-items: center;
+    justify-content: center;
+    padding: $paddingButtons;
+    font-size: 18px;
+    font-weight: bold;
+    &:hover{
+        background-color: $primary;
+        color: $ligth;
+    }
+}
