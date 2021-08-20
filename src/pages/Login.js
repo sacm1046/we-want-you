@@ -34,7 +34,7 @@ export const getTokenFromUrl = () => {
 export default function Login() {
   return (
     <section className="section">
-      <Spotify size={250} color={color.light} />
+      <Spotify size={200} color={color.light} />
       <Anchor
         href={href_login}
         text="MUSIC NOW"

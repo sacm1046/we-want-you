@@ -7,3 +7,12 @@
     width: 100%;
     padding: 20px 40px;
 }
+
+@media only screen and (max-width: $mobile-end) {
+    .navbar{
+        flex-direction: column;
+        & > svg {
+         margin-bottom: 20px;
+        }
+    }
+}
