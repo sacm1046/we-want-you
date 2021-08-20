@@ -1,3 +1,5 @@
+import PropTypes from "prop-types";
+import { color } from "../../utils/systemColors";
 export default function Spotify(props) {
   const { size, color } = props;
   return (
@@ -9,3 +11,13 @@ export default function Spotify(props) {
     </svg>
   );
 }
+
+Spotify.propTypes = {
+  size: PropTypes.number,
+  color: PropTypes.string,
+};
+
+Spotify.defaultProps = {
+  size: 100,
+  color: color.dark,
+};

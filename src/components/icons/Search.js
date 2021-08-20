@@ -1,7 +1,7 @@
 import PropTypes from "prop-types";
 import { color } from "../../utils/systemColors";
 
-export default function Play(props) {
+export default function Search(props) {
   const { size, color } = props;
   return (
     <svg
@@ -9,20 +9,20 @@ export default function Play(props) {
       width={size}
       height={size}
       fill={color}
-      className="bi bi-play-fill"
+      className="bi bi-search"
       viewBox="0 0 16 16"
     >
-      <path d="m11.596 8.697-6.363 3.692c-.54.313-1.233-.066-1.233-.697V4.308c0-.63.692-1.01 1.233-.696l6.363 3.692a.802.802 0 0 1 0 1.393z" />
+      <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z" />
     </svg>
   );
 }
 
-Play.propTypes = {
+Search.propTypes = {
   size: PropTypes.number,
   color: PropTypes.string,
 };
 
-Play.defaultProps = {
+Search.defaultProps = {
   size: 100,
   color: color.dark,
 };

@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import PropTypes from "prop-types";
 import { anchorType } from "./anchorTypes";
 import "./style.scss";
 
@@ -28,3 +29,18 @@ export default function Anchor(props) {
 
   return renderAnchor();
 }
+
+Anchor.propTypes = {
+  href: PropTypes.string,
+  text: PropTypes.string.isRequired,
+  className: PropTypes.string,
+  type: PropTypes.string,
+  onClick: PropTypes.func,
+};
+
+Anchor.defaultProps = {
+  className: '',
+  type: anchorType.default,
+  href: undefined,
+  onClick: undefined,
+};

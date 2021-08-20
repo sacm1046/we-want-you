@@ -1,6 +1,9 @@
 import { useState } from "react";
 import { hasData } from "../../utils/hasData";
+import PropTypes from "prop-types";
 import "./style.scss";
+import Search from "../icons/Search";
+import { color } from "../../utils/systemColors";
 
 export default function InputSearch(props) {
   const { placeholder, onChange, value, suggestions, onClick } = props;
@@ -35,13 +38,25 @@ export default function InputSearch(props) {
 
   return (
     <div className="input-control">
-      <input
-        type="text"
-        value={value}
-        placeholder={placeholder}
-        onChange={handleChange}
-      />
+      <span>
+        <input
+          type="text"
+          value={value}
+          placeholder={placeholder}
+          onChange={handleChange}
+        />
+        <Search size={25} color={color.primary} />
+      </span>
       {(hasData(suggestions) && hasData(value) && showSuggestions) && renderSuggestions()}
     </div>
   );
 }
+
+InputSearch.propTypes = {
+  placeholder: PropTypes.string.isRequired,
+  value: PropTypes.string.isRequired,
+  suggestions: PropTypes.array.isRequired,
+  onChange: PropTypes.func.isRequired,
+  onClick: PropTypes.func.isRequired,
+};
+

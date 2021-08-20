@@ -1,3 +1,4 @@
+import PropTypes from "prop-types";
 import "./style.scss";
 
 export default function Player(props) {
@@ -17,3 +18,8 @@ export default function Player(props) {
     </div>
   );
 }
+
+Player.propTypes = {
+  trackId: PropTypes.string.isRequired,
+  src: PropTypes.string.isRequired,
+};

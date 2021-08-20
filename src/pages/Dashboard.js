@@ -27,14 +27,6 @@ export default function Dashboard(props) {
     }
   }, [suggestionValue, spotifyWebApi]);
 
-  /* useEffect(() => {
-    if(hasData(selectedTrackId)){
-      spotifyWebApi.getTrack(selectedTrackId).then((res) => {
-        console.log(res)
-      })
-    }
-  }, [selectedTrackId]); */
-
   return (
     <section className="section">
       <InputSearch

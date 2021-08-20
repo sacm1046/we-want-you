@@ -1,3 +1,4 @@
+import PropTypes from "prop-types";
 import "./style.scss";
 
 export default function Title(props) {
@@ -9,3 +10,8 @@ export default function Title(props) {
     </>
   );
 }
+
+Title.propTypes = {
+  title: PropTypes.string.isRequired,
+  subTitle: PropTypes.string.isRequired,
+};

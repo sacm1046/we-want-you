@@ -3,6 +3,7 @@ import { color } from "../../utils/systemColors";
 import Anchor from "../anchor/Anchor";
 import { anchorType } from "../anchor/anchorTypes";
 import Spotify from "../icons/Spotify";
+import PropTypes from "prop-types";
 import "./style.scss";
 
 export default function Navbar(props) {
@@ -21,3 +22,7 @@ export default function Navbar(props) {
     </nav>
   );
 }
+
+Navbar.propTypes = {
+  setToken: PropTypes.func.isRequired,
+};
