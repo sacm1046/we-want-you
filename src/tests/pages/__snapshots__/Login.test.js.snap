@@ -1,0 +1,18 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Test para pages/Login Se debe renderizar el componente Login 1`] = `
+<section
+  className="section"
+>
+  <Spotify
+    color="#fff"
+    size={250}
+  />
+  <Anchor
+    className="mt-10"
+    href="https://accounts.spotify.com/authorize?client_id=605c5be1972943f6b90dc2159807073e&redirect_uri=http://localhost:3000&scope=user-read-currently-playing%20user-read-recently-played%20user-read-playback-state%20user-top-read%20user-modify-playback-state%20streaming&response_type=token&show_dialog=true"
+    text="MUSIC NOW"
+    type="default"
+  />
+</section>
+`;

@@ -1,9 +1,9 @@
 import { useState } from "react";
 import { hasData } from "../../utils/hasData";
 import PropTypes from "prop-types";
-import "./style.scss";
 import Search from "../icons/Search";
 import { color } from "../../utils/systemColors";
+import "./style.scss";
 
 export default function InputSearch(props) {
   const { placeholder, onChange, value, suggestions, onClick } = props;

@@ -1,0 +1,16 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Test para components/title/Title Se debe renderizar el componente Title 1`] = `
+<Fragment>
+  <h1
+    className="msg-header"
+  >
+    Título de prueba
+  </h1>
+  <h2
+    className="msg-sub-header"
+  >
+    Sub título de prueba
+  </h2>
+</Fragment>
+`;
