@@ -1,45 +1,48 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import Navbar from "../components/navbar/Navbar";
-import { hasData } from "../utils/hasData";
 import Dashboard from "../pages/Dashboard";
-import Player from "../pages/Player";
-import Login from "../pages/Login";
+import Login, { getTokenFromUrl } from "../pages/Login";
 import NotFound from "../pages/NotFound";
+import SpotifyWebApi from "spotify-web-api-js";
+const spotifyWebApi = new SpotifyWebApi();
 
 export default function Routes() {
-  const [user] = useState(true);
+  const [token, setToken] = useState(null);
 
-  /* const logout = () => {
-    setUser(null);
-  };
+  useEffect(() => {
+    const hash = getTokenFromUrl();
+    window.history.pushState({}, null, "/");
+    const accessToken = hash.access_token;
+    console.log(accessToken);
+    if (accessToken) setToken(accessToken);
+  }, []);
 
-  const login = (data) => {
-    const { email, token } = data;
-    setUser({
-      email,
-      token,
-    });
-  }; */
+  useEffect(() => {
+    if (token) {
+      spotifyWebApi.setAccessToken(token);
+    }
+  }, [token]);
 
   return (
     <Router>
-      {!hasData(user) ? (
+      {!token ? (
         <Switch>
-          <Route
-            exact
-            path="/"
-            component={() => <Login /* login={login} */ />}
-          />
+          <Route exact path="/" component={Login} />
           <Route component={NotFound} />
         </Switch>
       ) : (
         <>
-          <Navbar />
+          <Navbar setToken={setToken} />
           <div className="general_container">
             <Switch>
-              <Route exact path="/" component={Dashboard} />
-              <Route exact path="/song/:id" component={Player} />
+              <Route
+                exact
+                path="/"
+                component={() => (
+                  <Dashboard token={token} spotifyWebApi={spotifyWebApi} />
+                )}
+              />
               <Route component={NotFound} />
             </Switch>
           </div>

@@ -1,5 +1,9 @@
 @import '../../styles/base/settings';
 
-.anchor{
-    
+.navbar{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding: 20px 40px;
 }

@@ -1,41 +1,48 @@
-body, html {
-    padding: 0;
-    margin: 0;
-    height: 100%;
-    width: 100%;
-    font-family: Helvetica, sans-serif;
-    background-color: $dark;
-  }
+$list: $dark, $primary;
 
-  h4, h5, p {
-    margin: 0;
-  }
-  
-  #root{
-    min-height: 100vh;
-    display: grid;
-    grid-template-rows: auto 1fr;
-    grid-template-columns: 100%;
-  }
-  
-  *, *::before, *::after {
-    box-sizing: border-box;
-  }
+body,
+html {
+  padding: 0;
+  margin: 0;
+  height: 100%;
+  width: 100%;
+  font-family: Helvetica, sans-serif;
+  background: -webkit-linear-gradient(300deg, $list);
+}
 
-  .d-none{
-    display: none;
-  }
+h4,
+h5,
+p {
+  margin: 0;
+}
 
-  .section {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-top: 100px;
-  }
+#root {
+  min-height: 100vh;
+  display: grid;
+  grid-template-rows: auto 1fr;
+  grid-template-columns: 100%;
+}
 
-  @for $i from 1 to 100 {
-    .mt-#{$i} {
-      margin-top: $i * 10px;
-    }
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+.d-none {
+  display: none;
+}
+
+.section {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 100px;
+}
+
+@for $i from 1 to 100 {
+  .mt-#{$i} {
+    margin-top: $i * 10px;
   }
+}

@@ -1,0 +1,16 @@
+@import "../../styles/base/settings";
+
+.player {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  
+  & > img {
+    width: 200px;
+    max-width: 400px;
+    border-radius: 50%;
+    margin-bottom: 50px;
+    border: 10px solid $light;
+  }
+}
