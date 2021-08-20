@@ -27,3 +27,27 @@ We are looking to a way that allows us to fetch our favorites songs from Spotify
 
 # Time
 - You have 6 hours maximum if you need more time, don't worry push your changes! is more important the quality than finish it
+
+# Scripts
+
+#### Install dependencies
+```bash
+ npm install
+```
+
+#### Start a server on project
+```bash
+ npm run start
+```
+
+#### Execute unitary tests on project
+```bash
+ npm run test
+```
+
+# References
+
+#### Enzyme for react-17 [https://www.npmjs.com/package/@wojtekmaj/enzyme-adapter-react-17]
+#### SVG Icons [https://icons.getbootstrap.com/]
+#### Spotify Api [https://developer.spotify.com/console/] [https://github.com/JMPerez/spotify-web-api-js]
+
