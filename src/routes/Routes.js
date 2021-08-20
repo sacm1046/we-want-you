@@ -14,7 +14,12 @@ export default function Routes() {
     const hash = getTokenFromUrl();
     window.history.pushState({}, null, "/");
     const accessToken = hash.access_token;
-    if (accessToken) setToken(accessToken);
+    if (accessToken) {
+      setToken(accessToken);
+      sessionStorage.setItem("token", accessToken);
+    } else if (!accessToken && sessionStorage.getItem("token")) {
+      setToken(sessionStorage.getItem("token"));
+    }
   }, []);
 
   useEffect(() => {

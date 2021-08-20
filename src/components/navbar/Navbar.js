@@ -12,7 +12,8 @@ export default function Navbar(props) {
   const history = useHistory();
   const logout = () => {
     setToken(null);
-    history.push('/')
+    history.push('/');
+    sessionStorage.removeItem('token');
   }
 
   return (
