@@ -14,7 +14,6 @@ export default function Routes() {
     const hash = getTokenFromUrl();
     window.history.pushState({}, null, "/");
     const accessToken = hash.access_token;
-    console.log(accessToken);
     if (accessToken) setToken(accessToken);
   }, []);
 
